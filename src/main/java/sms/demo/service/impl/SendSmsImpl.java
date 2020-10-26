@@ -27,7 +27,7 @@ public class SendSmsImpl implements SendSms {
     @Override
     public boolean send(String phoneNumbers, String templateCode, Map<String, Object> code) {
         //连接阿里云
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4Fx9rJveLGvMRzxxYmrw", "AwsZ3VqbR6am9KVWXt67Us02QjZ2oU");
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "", "");
         IAcsClient client = new DefaultAcsClient(profile);
         //构建请求
         CommonRequest request = new CommonRequest();
